@@ -1,0 +1,82 @@
+
+MISSIONARIES AND CANNIBALS PROBLEM
+----------------------------------
+
+Problem Statement
+-----------------
+The Missionaries and Cannibals problem is a classical Artificial Intelligence search problem.
+
+There are three missionaries and three cannibals on the left bank of a river. They all need to cross the river to the right bank using a boat. The boat can carry at most two people at a time. The goal is to transfer everyone safely to the other side without violating the constraints.
+
+Constraints:
+1. The boat can carry a maximum of two people.
+2. At least one person must row the boat.
+3. If the number of cannibals exceeds the number of missionaries on either bank, the missionaries will be eaten.
+4. The objective is to move all missionaries and cannibals safely to the right bank.
+
+Initial State:
+(3 Missionaries, 3 Cannibals, Boat on Left Bank)
+
+Goal State:
+(0 Missionaries, 0 Cannibals, Boat on Right Bank)
+
+
+SEARCH ALGORITHMS USED
+----------------------
+1. Breadth First Search (BFS)
+2. Depth First Search (DFS)
+3. Depth Limited Search (DLS)
+4. Iterative Deepening Depth First Search (IDDFS)
+5. Uniform Cost Search (UCS)
+
+
+TIME AND SPACE COMPLEXITY COMPARISON
+------------------------------------
+
+Algorithm : Breadth First Search (BFS)
+Time Complexity  : O(b^d)
+Space Complexity : O(b^d)
+Description      : Explores nodes level by level and guarantees the shortest path.
+
+Algorithm : Depth First Search (DFS)
+Time Complexity  : O(b^m)
+Space Complexity : O(b*m)
+Description      : Explores the deepest nodes first before backtracking.
+
+Algorithm : Depth Limited Search (DLS)
+Time Complexity  : O(b^l)
+Space Complexity : O(b*l)
+Description      : DFS with a depth limit to avoid infinite search.
+
+Algorithm : Iterative Deepening DFS (IDDFS)
+Time Complexity  : O(b^d)
+Space Complexity : O(b*d)
+Description      : Repeatedly applies DFS with increasing depth limits.
+
+Algorithm : Uniform Cost Search (UCS)
+Time Complexity  : O(b^d)
+Space Complexity : O(b^d)
+Description      : Expands nodes with the lowest path cost first.
+
+Where:
+b = branching factor
+d = depth of the optimal solution
+m = maximum depth of the search tree
+l = depth limit
+
+
+OVERALL COMPARISON
+------------------
+
+Algorithm | Complete | Optimal | Memory Usage | Speed
+-----------------------------------------------------
+BFS       | Yes      | Yes     | High         | Moderate
+DFS       | No       | No      | Low          | Fast
+DLS       | No       | No      | Low          | Fast
+IDDFS     | Yes      | Yes     | Moderate     | Good
+UCS       | Yes      | Yes     | High         | Moderate
+
+
+Conclusion
+----------
+BFS guarantees the shortest path but requires high memory. DFS uses less memory but may explore deep paths unnecessarily. DLS restricts the depth of exploration. IDDFS combines the advantages of BFS and DFS. UCS finds the optimal solution when costs vary but consumes more memory.
